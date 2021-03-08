@@ -17,6 +17,8 @@ public class MethodsExercises {
 
         getUserNum();
 
+        roll();
+
     }
 
 
@@ -52,7 +54,7 @@ public class MethodsExercises {
         System.out.println("Enter a number between " + min + " and " + max + ": ");
         int userInput = sc.nextInt();
         if (userInput >= min && userInput <= max) {
-           return userInput;
+            return userInput;
         } else {
             return getInteger(min, max);
         }
@@ -78,7 +80,7 @@ public class MethodsExercises {
 
     public static long factorial(int num) {
         long fac = 1;
-        for (int i = 2; i <= num; i ++) {
+        for (int i = 2; i <= num; i++) {
             fac = fac * i;
         }
         return fac;
@@ -87,10 +89,23 @@ public class MethodsExercises {
 
     /////////////////////////////
 
+    public static void roll() {
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many sides does this dice have?");
+        int userInput = sc.nextInt();
 
+        int die1 = (int) (Math.random() * userInput) + 1;
+        int die2 = (int) (Math.random() * userInput) + 1;
+        System.out.println(die1);
+        System.out.println(die2);
 
-
+        System.out.println("Do you want to roll again? Yes or No");
+        String userAnswer = sc.next().toLowerCase();
+        if (userAnswer.equals("yes")) {
+            roll();
+        }
+    }
 
 
 }
