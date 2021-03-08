@@ -11,11 +11,58 @@ public class Practice {
 
 //        multiplyUserInput();
 
-        getNames("Bob");
-        getNames("Bob", "Tom");
-        getNames("Bob", "Tom", "Tim");
+//        getNames("Bob");
+//        getNames("Bob", "Tom");
+//        getNames("Bob", "Tom", "Tim");
+
+        System.out.println(sum(10));
 
     }
+
+//    Write a method named firstChar() that takes a string as an input and returns the first letter as a character data type.
+//    Write a method named secondChar() that takes a string as an input and returns the first letter as a character data type.
+//    Write a method named lastChar() that takes a string as an input and returns the last letter as a character data type.
+//    Write a method named secondToLastChar() that takes a string as an input and returns the second to letter as a character data type.
+//    Write a method named userWantsToContinue(). This method should prompt the user if they want to continue and then return a boolean value if the user inputs "y" or "yes".
+
+    public static char firstChar(String str) {
+        return str.charAt(0);
+    }
+
+    public static char secondChar(String str) {
+        return str.charAt(1);
+    }
+
+    public static char lastChar(String str) {
+        return str.charAt(str.length() -1);
+    }
+
+    public static char secondToLastChar(String str) {
+        return str.charAt(str.length() -2);
+    }
+
+    public static boolean isEven(int num) {
+        return ( num % 2 == 0 );
+    }
+
+    public static boolean isOdd(int num) {
+        return ( num % 3 == 0 );
+    }
+
+///////// Recursion
+
+
+    public static int sum(int k) {
+        if (k > 0) {
+            return k + sum ( k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+
+    ////////////////
+
 
     // ============ Mini Exercise #1 =============
     /* TODO:
