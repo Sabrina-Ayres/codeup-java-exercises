@@ -2,11 +2,8 @@ public class Person {
 
     private String name;
 
-    public Person() {
-    }
-
-    public Person(String jamo) {
-
+    public Person(String name) {
+     this.name = name;
     }
 
     public String getName(){
@@ -22,17 +19,17 @@ public class Person {
     }
 
 
-    public static void main(String[] args) {
-
-        Person one = new Person();
-        one.name = "Bob";
-
-        System.out.println(one.sayHello());
-        one.setName("John");
-
-        one.getName();
-        System.out.println(one.name);
-
-    }
+//    public static void main(String[] args) {
+//
+//        Person one = new Person();
+//        one.name = "Bob";
+//
+//        System.out.println(one.sayHello());
+//        one.setName("John");
+//
+//        one.getName();
+//        System.out.println(one.name);
+//
+//    }
 
 }

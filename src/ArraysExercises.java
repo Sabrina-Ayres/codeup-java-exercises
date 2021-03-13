@@ -27,8 +27,8 @@ public class ArraysExercises {
     }
 
     private static Person[] addPerson(Person[] people, Person person) {
-        Person[] newPeopleArray = Arrays.copyOf(people, people.length + 1);
 
+        Person[] newPeopleArray = Arrays.copyOf(people, people.length + 1);
         newPeopleArray[newPeopleArray.length - 1] = person;
         return newPeopleArray;
 
