@@ -2,6 +2,13 @@ public class Person {
 
     private String name;
 
+    public Person(String jamo) {
+    }
+
+    public Person() {
+
+    }
+
     public String getName(){
         return this.name;
     }
