@@ -2,10 +2,10 @@ public class Person {
 
     private String name;
 
-    public Person(String jamo) {
+    public Person() {
     }
 
-    public Person() {
+    public Person(String jamo) {
 
     }
 
