@@ -6,6 +6,14 @@ public class ShapesTest {
 
         Quadrilateral myShape;
 
+        myShape = new Rectangle(5, 10);
+//        System.out.println("Area: %s", Shape.getArea());
+//        System.out.println("Perimeter: %s", Shape.getPerimeter());
+
+        myShape.setWidth(10);
+        myShape.setLength(5);
+
+
 //        Rectangle box1 = new Rectangle(5, 4);
 //        System.out.println(box1.getPerimeter());
 //        System.out.println(box1.getArea());
