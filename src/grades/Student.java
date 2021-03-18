@@ -1,16 +1,16 @@
 package grades;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Student {
 
-    private String name;
-    private ArrayList<Integer> grades;
+    private static String name;
+    private static ArrayList<Integer> grades;
 
-    public Student(String name, ArrayList<Integer> grades) {
+
+    public Student(String name) {
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     // returns the student's name
@@ -20,10 +20,7 @@ public class Student {
 
     // adds the given grade to the grades property
     public void addGrade(int grade) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter students grade: ");
-        int studentGrade = sc.nextInt();
-        grades.add(studentGrade);
+        grades.add(grade);
     }
 
     // returns the average of the students grades
@@ -34,6 +31,20 @@ public class Student {
             sum = sum + grades.get(i);
         double average = sum / length;
         return average;
+    }
+
+    public static void main(String[] args) {
+
+        Student studentOne = new Student("Jamo");
+
+        studentOne.addGrade(98);
+        studentOne.addGrade(100);
+        studentOne.addGrade(90);
+
+        System.out.println(grades);
+        System.out.println(studentOne.getName());
+        System.out.println(studentOne.getGradeAverage());
+
     }
 
 }
