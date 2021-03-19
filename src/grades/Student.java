@@ -33,18 +33,4 @@ public class Student {
         return average;
     }
 
-    public static void main(String[] args) {
-
-        Student studentOne = new Student("Jamo");
-
-        studentOne.addGrade(98);
-        studentOne.addGrade(100);
-        studentOne.addGrade(90);
-
-        System.out.println(grades);
-        System.out.println(studentOne.getName());
-        System.out.println(studentOne.getGradeAverage());
-
-    }
-
 }

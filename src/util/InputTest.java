@@ -6,6 +6,9 @@ public class InputTest {
 
         Input input = new Input();
 
+        input.getInt();
+
+
 //        System.out.println("Say Something...");
 //        String userInput = input.getString();
 //        System.out.println("You said... " + userInput);
