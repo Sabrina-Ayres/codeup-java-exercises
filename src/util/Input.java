@@ -18,13 +18,23 @@ public class Input {
         String input = scanner.next();
         return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
     }
+//
+//    public int getInt() {
+////        System.out.println("Enter a number: ");
+//        try {
+//            return Integer.valueOf(getString());
+//        } catch (Exception e) {
+//            System.out.println("That is not a valid number. Please try again.");
+//            return getInt();
+//        }
+//    }
 
     public int getInt() {
-        System.out.println("Enter a number: ");
-        try {
-            return Integer.valueOf(getString());
-        } catch (Exception e) {
-            System.out.println("That is not a valid number. Please try again.");
+        if (scanner.hasNextInt()) {
+            return scanner.nextInt();
+        } else {
+            System.out.println("Try again!");
+            scanner.nextLine();
             return getInt();
         }
     }
@@ -108,15 +118,8 @@ public class Input {
 //        }
 //    }
 //
-//    public int getInt() {
-//        if (sc.hasNextInt()) {
-//            return sc.nextInt();
-//        } else {
-//            System.out.println("Try again!");
-//            sc.nextLine();
-//            return getInt();
-//        }
-//    }
+
+
 //
 //
 //    public double getDouble(double min, double max) {
