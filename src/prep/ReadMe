@@ -1,0 +1,44 @@
+OOP
+Food.java
+has private properties for String name, String description, and int calories
+takes in arguments in constructor in order to assign values to those properties (this.prop = value;)
+CONSTUCTOR throws an IllegalArgumentException if any of the arguments are null or empty (note: integers cannot be null)
+You will need to both define the constructor as able to throw the exception and also conditionally actually throw the exception in the method body of the constructor
+create public getter and setter methods for each property
+HINT: there is a shortcut in Intellij that will do this for you
+Children classes
+pick two types of food classes to extend from Food.java
+your choice on this one! Ideas like Pizza/Taco, or Mexican/Italian, or Dinner/Dessert will work just fine, but use your imagination
+The child class should take in the arguments needed to pass along to the parent Food class using the super() method inside of it's own constructor body. Remember, the order matters!
+Add a unique, private property or two to each child class. You can use a boolean, int, String, or anything!
+For dessert, maybe boolean isSweet. For dinner, maybe isSeasoned. Again, you can use your own examples!
+Add getter and setter methods for the properties in your child classes
+HINT: shortcuts are your friend in this case!
+Interface Consumable
+has two method definitions to be implemented in children
+void consume(String name) - Will display an emote of the food being eaten with the name of the food included in the message.
+Collection<String> getFullDescription - Returns to the caller a collection of strings representing all of the properties present on the parent/child objects. This will need to be implemented in the lowest child class. In order to access the parent's properties, you will need to use super and chain the getter method for each property.
+ie: super.getName(), super.getDescription, etc
+remember that Collection<> is not a concrete type. You must decide at some point what TYPE of collection to use.
+Have the children implement Consumable. What happens when I:
+have Food implement rather than the lowest child class?
+try to implement in more than one place?
+the main goal is to successfully implement both consume() and getFullDescription, finding the best, most effective place to do so.
+App.java
+blow away you math things
+create a Collection (I'd use ArrayList) of foods as a variable.
+Insert new instances of concrete food children and pass in the needed arguments
+For each Food in the list, print out the result of getFullDescription
+Create an int caloriesConsumed. Set it to 0
+For each Food in the list, ask the user (HINT: get scanner input) if they want to consume the food
+If yes, consume(name)
+If yes, add the calories from that specific food to caloriesConsumed
+When all foods have been consumed or not, display to the user caloriesConsumed
+Remember that exception we want Food to throw? Pass in a null/empty name, description, or calories prop and watch it light on fire!
+
+
+
+
+
+3:02
+Remember: do this a chunk at a time. Keep it simple and close to the directions!
