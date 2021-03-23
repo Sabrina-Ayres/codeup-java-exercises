@@ -1,12 +1,11 @@
 package prep;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 public interface Consumable {
 
-    void consume(String name);
+    void consume();
 
-    Collection<String> getFullDescription = new ArrayList<>();
+    List<String> getFullDescription();
 
 }

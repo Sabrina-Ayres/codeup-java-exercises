@@ -1,6 +1,6 @@
 package prep;
 
-public class Arithimetic {
+public class Arithmetic {
 
 
     public static int square(int x) {
@@ -17,9 +17,9 @@ public class Arithimetic {
 
     public static int product(int x, int y) {
         return x * y;
-    }
+    }   // Can use double
 
-    public static double average(int[] arr) {
+    public static double average(int[] arr) {   // Must do double
         double sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
